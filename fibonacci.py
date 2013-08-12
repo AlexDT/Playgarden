@@ -10,14 +10,17 @@ def fibonacci(fibnumb):
     for i in range(0, int(fibnumb)):
         if b == 0:
             b = 1
-            print str(i + 1) + ":", str(b)
+#            print str(i + 1) + ":", str(b)
         else:
             c = a + b
             a = b
             b = c
-            print str(i + 1) + ":", str(c)
+#            print str(i + 1) + ":", str(c)
     return c
 
-number = fibonacci(fibnumb)
+number1 = fibonacci(fibnumb)
+number2 = fibonacci(int(fibnumb)+1)
+fib = float(number2)/number1
 
-print "Nummer %s in deze reeks is %s" % (str(fibnumb), number)
+# print "Nummer %s in deze reeks is %s" % (str(fibnumb), number)
+print "Fibonacci =", fib
