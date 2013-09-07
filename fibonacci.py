@@ -10,12 +10,10 @@ def fibonacci(fibnumb):
     for i in range(0, int(fibnumb)):
         if b == 0:
             b = 1
-#            print str(i + 1) + ":", str(b)
         else:
             c = a + b
             a = b
             b = c
-#            print str(i + 1) + ":", str(c)
     return c
 
 number1 = fibonacci(fibnumb)
