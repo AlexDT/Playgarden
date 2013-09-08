@@ -1,5 +1,5 @@
 '''
-    ONLY READ THIS IF YOU ALREADY SOLVED THIS PROBLEM!
+    ONLY READ THIS IF YOU HAVE ALREADY SOLVED THIS PROBLEM!
     File created for http://projecteuler.net/
 
     Created by: Alex Dias Teixeira
