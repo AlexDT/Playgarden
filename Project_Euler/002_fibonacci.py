@@ -19,7 +19,11 @@
 def fibonacci():
     '''(None) -> integer
     
-    This function 
+    This function will generate an integer. This integer is the sum of all the
+    even fibonacci number under 4.000.000.
+    
+    >>> fibonacci()
+    4613732
     '''
     a = 0                   # Given first number in the fibonacci sequence
     b = 1                   # Given second number in the fibonacci sequence
