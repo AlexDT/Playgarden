@@ -17,18 +17,21 @@
 #
 
 def fibonacci():
+    '''(None) -> integer
+    
+    This function 
+    '''
+    a = 0                   # Given first number in the fibonacci sequence
+    b = 1                   # Given second number in the fibonacci sequence
+    c = 0                   # Creates the variable for the new fibonacci number in the sequence
+    som = 0                 # Creates the variable to add the even fibonacci numbers to
 
-    a = 0
-    b = 1
-    c = 0
-    som = 0
+    while som < 4000000:    # Keeps adding until fibonacci number reaches 4.000.000
+        c = a + b           # Creates new fibonacci number
+        a = b               # Replaces a with b
+        b = c               # Replaces b with c
+        if c % 2 == 0:      # Checks if fibonacci number is an even number
+            som = som + c   # Adds the even fibonacci numbers to the sum
+    return som              # Gives an integer back to the functioncall 
 
-    while som < 4000000:
-        c = a + b
-        a = b
-        b = c
-        if c % 2 == 0:
-            som = som + c
-    return som
-
-print fibonacci()
+print fibonacci()           # Calls the function
