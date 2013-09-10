@@ -34,7 +34,7 @@ def fibonacci():
         c = a + b
         a = b
         b = c
-        if c % 2 == 0:
+        if c % 2 == 0:      # Checks if fibonacci number is even
             som = som + c
     return som
 
