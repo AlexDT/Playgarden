@@ -13,11 +13,11 @@
 #        Find the sum of all the multiples of 3 or 5 below 1000.
 #
 
-som = 0
+total = 0
 
-for i in range(1, 1000):
+for i in range(1000):   # Loops tru every numbr till 1000
 
-    if (i % 3 == 0) or (i % 5 == 0):
-        som = som + i
-        
-print som
+    if (i % 3 == 0) or (i % 5 == 0):    # Checks if i can be divided by 3 or 5
+        total = total + i   # Adds a qualifying number to the total
+
+print total

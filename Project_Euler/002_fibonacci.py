@@ -16,7 +16,8 @@
 #        four million, find the sum of the even-valued terms.
 #
 
-def fibonacci():
+# This function maybe over the top for this problem.
+def sum_even_fib_numbers(x):
     # (None) -> integer
     # 
     # This function will generate an integer. This integer is the sum of all the
@@ -25,17 +26,16 @@ def fibonacci():
     # >>> fibonacci()
     # 4613732
 
-    a = 0
-    b = 1
-    c = 0
-    som = 0
+    a, b, c = 0, 1, 0
+    total = 0
 
-    while som < 4000000:    # Keeps adding until fibonacci number reaches 4.000.000
+    while total < x:    # Keeps adding until fibonacci number reaches 4.000.000
         c = a + b
         a = b
         b = c
-        if c % 2 == 0:      # Checks if fibonacci number is even
-            som = som + c
-    return som
+        if c % 2 == 0:  # Checks if fibonacci number is even
+            total = total + c
+    return total
 
-print fibonacci()           # Calls the function
+max = input("Maximum fibonacci number to add to the total? [integer]\n")
+print sum_even_fib_numbers(int(max))    # Calls the function
