@@ -1,3 +1,4 @@
+#    coding: utf-8
 #
 #    ONLY READ THIS IF YOU HAVE ALREADY SOLVED THIS PROBLEM!
 #    File created for http://projecteuler.net/
@@ -15,9 +16,9 @@
 
 total = 0
 
-for i in range(1000):   # Loops tru every numbr till 1000
+for i in range(1000):    # Loops tru every numbr till 1000
 
-    if (i % 3 == 0) or (i % 5 == 0):    # Checks if i can be divided by 3 or 5
-        total = total + i   # Adds a qualifying number to the total
+  if (i % 3 == 0) or (i % 5 == 0):    # Checks if i can be divided by 3 or 5
+    total = total + i    # Adds a qualifying number to the total
 
 print total

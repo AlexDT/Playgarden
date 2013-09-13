@@ -1,3 +1,4 @@
+#    coding: utf-8
 #
 #    ONLY READ THIS IF YOU HAVE ALREADY SOLVED THIS PROBLEM!
 #    File created for http://projecteuler.net/
@@ -18,24 +19,24 @@
 
 # This function maybe over the top for this problem.
 def sum_even_fib_numbers(x):
-    # (None) -> integer
-    # 
-    # This function will generate an integer. This integer is the sum of all the
-    # even fibonacci number under 4.000.000.
-    # 
-    # >>> fibonacci()
-    # 4613732
+  # (None) -> integer
+  # 
+  # This function will generate an integer. This integer is the sum of all the
+  # even fibonacci number under 4.000.000.
+  # 
+  # >>> fibonacci()
+  # 4613732
 
-    a, b, c = 0, 1, 0
-    total = 0
+  a, b, c = 0, 1, 0
+  total = 0
 
-    while total < x:    # Keeps adding until fibonacci number reaches 4.000.000
-        c = a + b
-        a = b
-        b = c
-        if c % 2 == 0:  # Checks if fibonacci number is even
-            total = total + c
-    return total
+  while total < x:    # Keeps adding until fibonacci number reaches 4.000.000
+    c = a + b
+    a = b
+    b = c
+    if c % 2 == 0:    # Checks if fibonacci number is even
+      total = total + c
+  return total
 
 max = input("Maximum fibonacci number to add to the total? [integer]\n")
 print sum_even_fib_numbers(int(max))    # Calls the function
