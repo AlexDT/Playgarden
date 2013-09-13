@@ -10,9 +10,10 @@
 #    Problem:    [3] - Largest prime factor
 #        A palindromic number reads the same both ways. The largest palindrome
 #        made from the product of two 2-digit numbers is 9009 = 91 × 99.
-#       
+#
 #        Find the largest palindrome made from the product of two 3-digit numbers.
 #
+
 import time
 
 def find_palindrome():
@@ -25,36 +26,22 @@ def find_palindrome():
   # Time taken: 0.397763967514 sec
   # 906609
 
+  # records the time at the moment
   time_start = time.time()
+  # largest palindrome number gets stored in pal_num
   pal_num = 0
 
   for a in range(100, 999):
     for b in range(100, 999):
+      # Turns product of a * b into a string, so it is subscriptable
       num = str(a * b)
+      # Checks if the product is identical to its reversed version &
+      # if the product is bigger than the previous pal_num
       if num == num[::-1] and int(num) > pal_num:
         pal_num = int(num)
-
+  # Calculated the difference between the two timestamps
   time_taken = time.time() - time_start
   print "Time taken:", time_taken, "sec"
   return pal_num
 
-#pal_num = 0
-#for a in range(100, 999):
-#  for b in range(100, 999):
-#    num = str(a * b)
-#      if num[0] == num[-1] and num[1] == num[-2] and num[2] == num[-3] and int(num) > pal_num:
-#        pal_num = int(num)
-
-#pal_num = 0
-#for a in range(100, 999):
-#  for b in range(100, 999):
-#      num = str(a * b)
-#      if num[0] == num[-1]:
-#        if num[1] == num[-2]:
-#          if num[2] == num[-3]:
-#            if int(num) > pal_num:
-#              pal_num = int(num)
-
 print find_palindrome()
-
-

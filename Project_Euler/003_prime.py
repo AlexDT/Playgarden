@@ -26,14 +26,19 @@ def find_factors(num):
   factor = []
   prime = 2
 
-  while prime <= num:    # Loops through all the numbers smaller than num
-    if num % prime == 0:    # Checks if the prime is a factor of num
-      factor.append(prime)    # Adds the factor to the list
-      num = num / prime    # divids num by the factor
-      prime += 1    # increases the prime to let the function check for the next prim
+  # Loops through all the numbers smaller than num
+  while prime <= num:
+    # Checks if the prime is a factor of num
+    if num % prime == 0:
+      # Adds the factor to the list
+      factor.append(prime)
+      # divids num by the factor
+      num = num / prime
+      # increases the prime to let the function check for the next prim
+      prime += 1
     else:
       prime += 1
-
-  return factor    # when the 'prime = num' the loops stops and list factor is returned
-
-print max(find_factors(600851475143))    # the largest value from the list is printed
+  # when the 'prime = num' the loops stops and list factor is returned
+  return factor
+# the largest value from the list is printed
+print max(find_factors(600851475143))
