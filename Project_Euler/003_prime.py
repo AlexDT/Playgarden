@@ -16,11 +16,11 @@
 def find_factors(num):
   # (integer) -> integer
   #
-  # This function wil calculate the biggest prime factor for the argument num.
+  # This function wil calculate all the (prime)factors for num.
   #
-  # >>> 600851475143
+  # >>> max(find_factors(600851475143))
   # 6857
-  # >>> 24
+  # >>> max(find_factors(24))
   # 4
 
   factor = []

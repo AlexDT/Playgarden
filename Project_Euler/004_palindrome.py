@@ -16,9 +16,18 @@
 import time
 
 def find_palindrome():
+  # (None) -> integer
+  #
+  # This function wil find the largest palindrome number that is the product of
+  # two 3-digit numbers.
+  #
+  # >>> find_palindrome()
+  # Time taken: 0.397763967514 sec
+  # 906609
+
   time_start = time.time()
   pal_num = 0
-  
+
   for a in range(100, 999):
     for b in range(100, 999):
       num = str(a * b)
@@ -45,7 +54,6 @@ def find_palindrome():
 #          if num[2] == num[-3]:
 #            if int(num) > pal_num:
 #              pal_num = int(num)
-
 
 print find_palindrome()
 

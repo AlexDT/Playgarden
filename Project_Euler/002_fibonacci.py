@@ -24,8 +24,12 @@ def sum_even_fib_numbers(x):
   # This function will generate an integer. This integer is the sum of all the
   # even fibonacci number under 4.000.000.
   # 
-  # >>> fibonacci()
+  # Maximum fibonacci number to add to the total? [integer]
+  # 4000000
   # 4613732
+  # Maximum fibonacci number to add to the total? [integer]
+  # 5
+  # 10
 
   a, b, c = 0, 1, 0
   total = 0
