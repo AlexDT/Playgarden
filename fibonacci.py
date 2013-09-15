@@ -2,8 +2,6 @@ fibnumb = raw_input("Welk getal in de fibonaccireeks wil je zien?\n\n")
 
 print "\n" + str(fibnumb), "it is!\n"
 
-
-def fibonacci(fibnumb):
     a = 0
     b = 0
     c = 0
