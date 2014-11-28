@@ -1,30 +1,75 @@
-class className:
-  """docstring for ClassName"""
-  def createName(self, name):
-    self.name = name
-  def displayName(self):
-    return self.name
-  def saying(self):
-    print 'Hello %s' % self.name
+class Student:
 
-class Bird:
-  def __init__(self, kind, call):
-    self.call = call
-    self.kind = kind
-  def do_call(self):
-    print 'a %s goes %s' % (self.kind, self.call)
+	def __init__(self):
+		self.courses = []
 
-class Parrot(Bird):
-  def __init__(self):
-    Bird.__init__(self, "Parrot", "Kah!")
+	@property
+	def age(self):
+		return self.age
+		
+	@age.setter
+	def age(self, value):
+		self.age = value
 
-class Cuckoo(Bird):
-  def __init__(self):
-    Bird.__init__(self, "Cuckoo", "Cuckoo!")
+	@property
+	def name(self):
+		return self.name 
+	
+	@name.setter
+	def name(self, value):
+		self.name = value
 
-if __name__ == "__main__":
-  parrot = Parrot()
-  cuckoo = Cuckoo()
+	def register(self, course):
+		self.courses.append(course)
+		
+	def total_costs(self):
+		total_costs = 0
+		for course in self.courses:
+			total_costs += course.cost
+		return total_costs
 
-parrot.do_call()
-cuckoo.do_call()
+	def show_classes(self):
+		for course in self.courses:
+			print course.__class__
+
+class Course:
+	
+	@property
+	def cost(self):
+		return self.cost # Int is not callable
+		
+	@property
+	def date(self):
+		return self.date
+	
+	def senior_discount(self, student):
+		if student.age > 64:
+			self.cost *= 0.8
+			return True 
+		return False
+		
+class LearnPython(Course):
+
+	def __init__(self):
+		self.cost = 45
+		self.date = "09/25"
+		
+class LearnBaristo(Course):
+
+	def __init__(self):
+		self.cost = 75
+		self.date = "10/24"
+	
+student = Student()
+student.name = "Alexander"
+student.age = 29
+
+student.register(LearnPython())
+student.register(LearnBaristo())
+
+print "total costs", str(student.total_costs()) # 120
+
+student.show_classes()
+
+print "discount:", LearnPython().senior_discount(student)
+

@@ -32,8 +32,8 @@ def find_palindrome():
   # largest palindrome number gets stored in pal_num
   pal_num = 0
 
-  for a in range(100, 999):
-    for b in range(100, 999):
+  for a in range(10, 99):
+    for b in range(10, 99):
       # Turns product of a * b into a string, so it is subscriptable
       num = str(a * b)
       # Checks if the product is identical to its reversed version &

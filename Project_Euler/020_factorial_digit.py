@@ -17,12 +17,13 @@
 #
 
 # see 016
+
 sum_num = 1
 
-for i in range(10, 0, -1:
+for i in range(10, 0, -1):
   if sum_num != 0:
-  i x= i
+      i x= i
 
-  sum_num += int(i)
+      sum_num += int(i)
 
 print sum_num
