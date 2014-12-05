@@ -1,3 +1,0 @@
-(functino()) {
-    var name = 'Alex';
-})();
